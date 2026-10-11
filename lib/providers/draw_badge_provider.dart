@@ -58,6 +58,11 @@ class DrawBadgeProvider extends ChangeNotifier {
     }
   }
 
+  /// Notify listeners once after a batch of preview cell changes.
+  void refreshPreviewGrid() {
+    notifyListeners();
+  }
+
   void clearPreviewGrid() {
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
